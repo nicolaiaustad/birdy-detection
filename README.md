@@ -11,8 +11,9 @@
    ```sh
    git clone https://github.com/nicolaiaustad/birdy-detection.git
    cd birdy-detection
-
-2. Then run:
    
+2. Start Docker:
+   ```sh
    docker compose build
    docker compose up
+
