@@ -4,10 +4,6 @@ from ultralytics import YOLO
 import os
 import torch
 
-#Function to enable use of GPU if available for faster processing
-def get_device():
-    return 'cuda' if torch.cuda.is_available() else 'cpu'
-
 # Helper function to extract frame_id from filename
 def extract_frame_id(filename):
     return int(filename.split('_')[1].split('.')[0])
