@@ -6,9 +6,9 @@ import os
 
 
 
-def main():
+def main(video_path='pigeon.mp4'):
     # Extract frames from video and save them to a folder in jpg format
-    video.extract_frames('pigeon.mp4', 'frame_folder')
+    video.extract_frames(video_path, 'frame_folder')
 
     # Detect objects in frames and save the results to a CSV file
     predictions.detect_objects('frame_folder', 'detected_objects.csv')
@@ -43,4 +43,4 @@ def main():
     )
 
 if __name__ == "__main__":
-    main()
+    main("pigeon.mp4")
