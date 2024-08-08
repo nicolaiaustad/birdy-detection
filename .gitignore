@@ -13,3 +13,4 @@ venv/
 frame_folder/
 detected_objects.csv
 birds_plot.png
+logfile
