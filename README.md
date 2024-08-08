@@ -10,4 +10,4 @@
 1. Clone the repository:
    ```sh
    git clone https://github.com/nicolaiaustad/birdy-detection.git
-   cd birdy_detection
+   cd birdy-detection
