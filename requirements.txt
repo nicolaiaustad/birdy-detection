@@ -1,0 +1,8 @@
+pandas
+sqlalchemy
+matplotlib
+seaborn
+opencv-python-headless
+ultralytics
+torch
+psycopg2-binary

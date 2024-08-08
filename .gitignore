@@ -1,0 +1,15 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore Docker-related files
+*.log
+
+# Ignore output files
+frame_folder/
+detected_objects.csv
+birds_plot.png
