@@ -15,7 +15,7 @@ def extract_frame_id(filename):
     
 def detect_objects(frames_path, output_csv):
     device = get_device()
-    model = YOLO('yolov8n.pt')
+    model = YOLO('yolov8n.pt').to(device)
     results = []
     
     # Ensure we read the frames in order
@@ -29,10 +29,11 @@ def detect_objects(frames_path, output_csv):
             #Create a path to the frame and read the frame image
             frame_path = os.path.join(frames_path, frame_file)
             frame = cv2.imread(frame_path)
+            frame_tensor = torch.from_numpy(frame).to(device)
             
             #Make predictions on the frame
-            detections = model(frame) 
-           
+            detections = model(frame_tensor)
+            
             for detection in detections: #There is only one object in detections as we only made predictions on one single frame, but we must still loop through it
                 for d in detection.boxes.data.tolist(): #Coverting the tensor to a list
                     x1, y1, x2, y2, score, class_id = d   
